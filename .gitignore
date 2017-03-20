@@ -1,0 +1,37 @@
+.DS_Store
+.editorconfig
+.htaccess
+composer.json
+contributing.md
+license.txt
+readme.rst
+
+system
+system/*
+
+user_guide
+user_guide/*
+
+application/cache/*
+!application/cache/index.html
+!application/cache/.htaccess
+
+application/config/development/*
+!application/config/development/index.html
+
+application/logs/*
+!application/logs/index.html
+!application/logs/.htaccess
+
+
+# IDE Files
+#-------------------------
+/nbproject/
+.idea/*
+
+## Sublime Text cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project

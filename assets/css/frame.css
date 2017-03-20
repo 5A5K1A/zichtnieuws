@@ -1,0 +1,87 @@
+/* fonts */
+@font-face {
+	font-family: 'Lato', sans-serif;
+	src: url('https://fonts.googleapis.com/css?family=Lato');
+}
+
+body {
+	background-color: #eee;
+	margin: 0;
+	padding: 0;
+}
+
+header,
+main {
+	padding: 0;
+}
+
+/* form styling */
+form {
+	margin: 0.5em auto;
+	padding: 1em;
+	background: #F7F7F7;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 0.2em;
+	border: 1px solid #ccc;
+	padding: 1em;
+	color: #555;
+	font: Arial, Helvetica, sans-serif;
+}
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+	box-shadow: 0 0 5px #00ADB5;
+	padding: 1em;
+	border: 1px solid #00ADB5;
+}
+
+form input[type="submit"],
+form input[type="button"] {
+	background: #00ADB5;
+	border: 0;
+	color: #fff;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-size: 1em;
+	padding: 0.5em;
+	min-width: 5em;
+	width: 30%;
+}
+form input[type="submit"]:hover,
+form input[type="button"]:hover {
+	background: #2EBC99;
+}
+
+/* .overview */
+.single-comment {
+	background-color: #F7F7F7;
+    margin: 1em 0;
+    padding: 0.5em;
+}
+.single-comment .author {
+	color: #555B64; /* lighten 20% */
+	display: block;
+	font-size: 0.8em;
+	font-style: italic;
+}
+.single-comment .name {
+	color: #00ADB5;
+	font-size: 1rem;
+	font-weight: bold;
+}
+.single-comment .comment {
+	margin-left: 1em;
+	margin-top: 0;
+}
+
