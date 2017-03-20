@@ -39,15 +39,16 @@ En tot slot: Voor ons is het belangrijk te begrijpen waarom je bepaalde beslissi
       Gewenste 'features': menu met verschillende nieuwsbericht-id's (om het nog een klein beetje waarheidsgetrouw te laten lijken), het iframe.
 
    - Het **iframe met een formulier**.
-      Gewenste velden: naam commentator, reactie (en email). Het nieuwsbericht-id wordt via de iframe url meegegeven en in een hidden field in het formulier opgeslagen.  
+      Gewenste velden: naam commentator, reactie (en email). Het nieuwsbericht-id wordt via de iframe url meegegeven en in een hidden field in het formulier opgeslagen.
       *Netter zou zijn om ook nog iets van een **honeypot of captcha** in te bouwen, om bots buiten de deur te houden. Hiervan ben ik me bewust, maar dit is vooralsnog nu nog even een @TODO.*
 
    - Een **overzicht van de eerder geposte reacties**.
-      Gewenste 'features': melding als er geen reacties zijn, geordend op datum (nieuwste eerst).  
+      Gewenste 'features': melding als er geen reacties zijn, geordend op datum (nieuwste eerst).
       Per reactie: naam & reactie. Als extra heb ik hier ook het e-mailadres weer toegevoegd en een "dagen-geleden" feature ingebouwd, die tot een week (8 dagen) terug het aantal minuten/uren/dagen geleden aan geeft.
 
    - Indien gepost: een melding en de **geposte reactie**.
 
+[wip]
 
 ## Zelf draaien & testen?
 1. Installeer een [Codeigniter project](https://github.com/bcit-ci/CodeIgniter). Hulp nodig? Bekijk de [Installation Instructions](https://codeigniter.com/user_guide/installation/index.html).
