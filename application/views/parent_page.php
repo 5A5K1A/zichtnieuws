@@ -12,10 +12,8 @@
 
 		<link rel="icon" href="<?php echo base_url(); ?>assets/img/favicon.ico">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
-
-		<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/script.js"></script>
 	</head>
-	<body>
+	<body onload="iframeLoaded();">
 		<nav>
 			<ul>
 				<li class="nav-item"><a href="/?id=123">Nieuws</a></li>
@@ -48,5 +46,6 @@
 		<footer>
 			<p><?php echo $copyright; ?></p>
 		</footer>
+		<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/script.js"></script>
 	</body>
 </html>

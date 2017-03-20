@@ -80,7 +80,7 @@ blockquote {
 
 iframe {
 	border: 0;
-	height: 100vh;
+	min-height: 5em;
 	width: 100%;
 }
 
