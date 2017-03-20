@@ -9,7 +9,7 @@
 	<?php foreach( (array) $comments as $comment ) : ?>
 
 	<div class="single-comment">
-		<span class="author"><span class="name"><?php echo $comment['author_name']; ?></span> (<?php echo $comment['author_email']; ?>) <?php echo studio_get_the_timetoshow($comment['created'], 8); ?></span>
+		<span class="author"><span class="name" rel="author"><?php echo $comment['author_name']; ?></span> (<?php echo $comment['author_email']; ?>) <?php echo studio_get_the_timetoshow($comment['created'], 8); ?></span>
 		<p class="comment"><?php echo nl2br( $comment['comment'] ); ?></p>
 	</div>
 <?php endforeach;
