@@ -2,15 +2,18 @@
 <!DOCTYPE html>
 <html lang="nl">
 	<head>
+		<meta charset="utf-8">
+
 		<title>Ons Zicht op het nieuws</title>
 
-		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Ons Zicht op het nieuws">
 		<meta name="author" content="Saskia Bouten">
 
 		<link rel="icon" href="<?php echo base_url(); ?>assets/img/favicon.ico">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
+
+		<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/script.js"></script>
 	</head>
 	<body>
 		<nav>
@@ -47,5 +50,3 @@
 		</footer>
 	</body>
 </html>
-<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/script.js"></script>
