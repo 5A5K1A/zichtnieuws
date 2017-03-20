@@ -17,16 +17,40 @@ Documenteer ook op welke manier een willekeurige website jouw oplossing zou kunn
 En tot slot: Voor ons is het belangrijk te begrijpen waarom je bepaalde beslissingen hebt genomen. Geef daarom in een heldere beschrijving weer waarom je welke keuzes gemaakt hebt.
 
 ---
-## Oplossing
+## Beschrijving & keuzes
 
-[wordt gevuld]
+1. **Hoe gaan we dit aanpakken?**
 
+   Mijn eerste gedachte was: "Waarom iets bouwen wat al bestaat en goed werkt? Ik stuur ze gewoon een WordPress pakket en een link naar de installatiehandleiding...", maar ik begrijp dat dat natuurlijk niet de bedoeling was met deze opdracht.
+   Vervolgens ben ik in plain PHP begonnen een MVC'tje te schrijven. Op zich ook leuk, maar het leek me handiger om toch weer even wat framework ervaring op te doen.
 
+2. **Welk framework moet ik nemen dan??**
+
+   Dat was Googlen; ik ken wel verschillende namen, maar welke dan het best te gebruiken is voor een opdracht als dit... Ik heb PHPStorm gedownload en was met composer aan de slag gegaan en een Symfony project aangemaakt. Na alle instellingen juist gezet te hebben en een werkende app te hebben, leek het me toch wel een heel erg groot pakket voor iets wat eigenlijk een simpel klein iets moest worden.
+   Het uiteindelijk gekozen framework ([Codeigniter](https://codeigniter.com)) was gewoon min of meer een random-pick. Het is in ieder geval een stuk kleiner, redelijk makkelijk in te komen en er makkelijk & snel een prototype mee te bouwen (incl. database connectie).
+
+3. **Wat heb ik eigenlijk nodig?**
+
+   - In ieder geval een **database**; de reacties moeten ergens naar weggeschreven en van opgehaald worden.
+      Gewenste velden: reactie-id, nieuwsbericht-id, naam commentator, reactie.
+      *Ik zie, bij het nalopen van deze readme, dat ik er zelf nog wat velden bij heb verzonnen: e-mail commentator, datum/tijd reactie.*
+
+   - Een **omvattende pagina** (prototype voor een nieuwspagina, waarin het iframe verwerkt is) is voor het gemak en het kunnen testen ook wel handig.
+      Gewenste 'features': menu met verschillende nieuwsbericht-id's (om het nog een klein beetje waarheidsgetrouw te laten lijken), het iframe.
+
+   - Het **iframe met een formulier**.
+      Gewenste velden: naam commentator, reactie (en email). Het nieuwsbericht-id wordt via de iframe url meegegeven en in een hidden field in het formulier opgeslagen.  
+      *Netter zou zijn om ook nog iets van een **honeypot of captcha** in te bouwen, om bots buiten de deur te houden. Hiervan ben ik me bewust, maar dit is vooralsnog nu nog even een @TODO.*
+
+   - Een **overzicht van de eerder geposte reacties**.
+      Gewenste 'features': melding als er geen reacties zijn, geordend op datum (nieuwste eerst).  
+      Per reactie: naam & reactie. Als extra heb ik hier ook het e-mailadres weer toegevoegd en een "dagen-geleden" feature ingebouwd, die tot een week (8 dagen) terug het aantal minuten/uren/dagen geleden aan geeft.
+
+   - Indien gepost: een melding en de **geposte reactie**.
 
 
 ## Zelf draaien & testen?
-Installeer een [Codeigniter pakket](https://github.com/bcit-ci/CodeIgniter) (Hulp nodig? Bekijk de [Installation Instructions](https://codeigniter.com/user_guide/installation/index.html)).
-Vervolgens kun je deze repo clonen (of downloaden) en de application directory in je project overschrijven. Voor de styling kun je de assets directory toevoegen.
-
-Let wel: de configuratie voor de database dien je nog zelf aan te passen in application/config/database.php
-De query om de benodigde database aan te maken, kun je vinden via deze [aparte SQL gist](https://gist.github.com/5A5K1A/eb0d42413e3c8b2c0bcc9cb00609d59e).
+1. Installeer een [Codeigniter project](https://github.com/bcit-ci/CodeIgniter). Hulp nodig? Bekijk de [Installation Instructions](https://codeigniter.com/user_guide/installation/index.html).
+2. Vervolgens kun je [deze repo](https://github.com/5A5K1A/zichtnieuws) clonen (of downloaden) en de application directory in je project overschrijven. Voor de styling kun je de assets directory toevoegen.
+3. Maak een database aan om de ingevoerde reacties ook daadwerkelijk op te kunnen slaan. De query om de benodigde database aan te maken, kun je vinden via deze [aparte SQL gist](https://gist.github.com/5A5K1A/eb0d42413e3c8b2c0bcc9cb00609d59e).
+4. Gebruik de gegevens (database naam, user & password) om de configuratie voor de database connectie in dit project in application/config/database.php aan te passen.
