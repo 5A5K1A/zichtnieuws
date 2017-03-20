@@ -38,25 +38,28 @@ En tot slot: Voor ons is het belangrijk te begrijpen waarom je bepaalde beslissi
    - Een **omvattende pagina** (prototype voor een nieuwspagina, waarin het iframe verwerkt is) is voor het gemak en het kunnen testen ook wel handig.
       Gewenste 'features': menu met verschillende nieuwsbericht-id's (om het nog een klein beetje waarheidsgetrouw te laten lijken), het iframe.
 
-   - Het **iframe met een formulier**.
+   - Het **iframe met een formulier**.  
       Gewenste velden: naam commentator, reactie (en email). Het nieuwsbericht-id wordt via de iframe url meegegeven en in een hidden field in het formulier opgeslagen.
       *Netter zou zijn om ook nog iets van een **honeypot of captcha** in te bouwen, om bots buiten de deur te houden. Hiervan ben ik me bewust, maar dit is vooralsnog nu nog even een @TODO.*
 
-   - Een **overzicht van de eerder geposte reacties**.
-      Gewenste 'features': melding als er geen reacties zijn, geordend op datum (nieuwste eerst).
+   - Een **overzicht van de eerder geposte reacties**.  
+      Gewenste 'features': melding als er geen reacties zijn, geordend op datum (nieuwste eerst).  
       Per reactie: naam & reactie. Als extra heb ik hier ook het e-mailadres weer toegevoegd en een "dagen-geleden" feature ingebouwd, die tot een week (8 dagen) terug het aantal minuten/uren/dagen geleden aan geeft.
 
-   - Indien gepost: een melding en de **geposte reactie**.
-      Gewenste 'features': terugkoppeling of het posten gelukt is en een overzicht van de verwerkte gegevens.
+   - Indien gepost: een melding en de **geposte reactie**.  
+      Gewenste 'features': terugkoppeling of het posten gelukt is en een overzicht van de verwerkte gegevens.  
       *Op dit moment is er nog geen goede error afhandeling ingebouwd. @TODO*
 
 4. **Werkt het dan nu?**
-   Ja, een demo versie is te zien op [zicht.5a2.nl](http://zicht.5a2.nl/).
-   *Uiteraard zijn er nog wat @TODO's en kan ook de CSS & JS wat beter, maar dat volgt in de iteratie ;-p*
+
+   Ja, een demo versie is te zien op [zicht.5a2.nl](http://zicht.5a2.nl/).  
+   *Uiteraard zijn er nog wat @TODO's en kan ook de CSS & JS wat beter, maar dat volgt in de iteratie ;-p*  
    Wil je ook graag testen? Clone (of download) deze repo dan voor een lokaal project, of neem contact op voor de inloggegevens.
 
 5. **Oh, ik heb nog wel een opmerking!**
-   Zin in een keiharde codereview en bugs/onjuistheden of betere oplossingen gevonden? Gooi er maar een issue tegenaan! \#happytolearn :-)
+
+   Zin in een keiharde codereview en bugs/onjuistheden of betere oplossingen gevonden? Gooi er maar een issue tegenaan!  
+   \#happytolearn :-)
 
 ## Zelf draaien & testen?
 1. Installeer een [Codeigniter project](https://github.com/bcit-ci/CodeIgniter). Hulp nodig? Bekijk de [Installation Instructions](https://codeigniter.com/user_guide/installation/index.html).
