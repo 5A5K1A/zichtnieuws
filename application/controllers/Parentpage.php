@@ -25,8 +25,9 @@ class Parentpage extends CI_Controller {
 	}
 
 	public function index() {
-		// just a simple toggle so not all comments have the same post parent
 		$data['post_id']  = getValue('id');
+		// just a simple toggle so not all comments have the same post parent
+		// @todo: remove this for actual case in production
 		if( empty($data['post_id']) ) {
 			$id_array         = array(123, 456, 789);
 			$data['post_id']  = $id_array[array_rand($id_array)];
