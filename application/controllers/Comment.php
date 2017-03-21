@@ -32,6 +32,9 @@ class Comment extends CI_Controller {
 	 * @param   integer   $post_id   The post identifier
 	 */
 	public function view( $post_id = NULL ) {
+		// clean post id
+		$post_id = intval($post_id);
+
 		// prepare data
 		$data['post_id']  = $post_id;
 		$data['comments'] = $this->comment_model->get_comments($post_id);
@@ -48,6 +51,9 @@ class Comment extends CI_Controller {
 	 * @param   integer   $post_id   The post identifier
 	 */
 	public function form( $post_id = NULL ) {
+		// clean post id
+		$post_id = intval($post_id);
+
 		// prepare data
 		$data['post_id']  = $post_id;
 		$data['comments'] = $this->comment_model->get_comments($post_id);
@@ -70,10 +76,10 @@ class Comment extends CI_Controller {
 		} else {
 			// update db with new comment
 			if( $this->comment_model->set_comment() ) {
-				$data['post_id']  = $this->input->post('postid');
+				$data['post_id']  = intval($this->input->post('postid'));
 				// prepare data array with new comment
 				$data['new_comment'] = array(
-					'post_id'      => $this->input->post('postid'),
+					'post_id'      => $data['post_id'],
 					'author_name'  => $this->input->post('author'),
 					'author_email' => $this->input->post('email'),
 					'comment'      => $this->input->post('comment')
@@ -82,7 +88,7 @@ class Comment extends CI_Controller {
 				$this->load->view('comment/header', $data);
 				$this->load->view('comment/success', $data);
 				// collect comments from db
-				$data['comments'] = $this->comment_model->get_comments($this->input->post('postid'));
+				$data['comments'] = $this->comment_model->get_comments($data['post_id']);
 				// remove the first one, 'cause that one is rendered already in success
 				array_shift($data['comments']);
 				if( empty($data['comments']) ) {

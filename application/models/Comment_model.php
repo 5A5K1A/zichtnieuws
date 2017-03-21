@@ -29,7 +29,7 @@ class Comment_model extends CI_Model {
 		$succes = $this->db->insert('comments', $data);
 		return $succes;
 
-		// TODO: return error message on fail
+		// @todo: return error message on fail
 	}
 
 	/**
@@ -38,10 +38,13 @@ class Comment_model extends CI_Model {
 	 * @return     string/array  The comments.
 	 */
 	public function get_comments( $post_id = NULL ) {
+		// clean post id
+		$post_id = intval($post_id);
+
 		$no_results = $this->lang->line('comments_noresults');
 
 		// early exit on no post id
-		if( $post_id == NULL ) { return $no_results; }
+		if( $post_id == NULL || $post_id === 0 ) { return $no_results; }
 
 		// grab comments from db
 		$sql   = 'SELECT * FROM comments WHERE post_id = ? ORDER BY created DESC';
