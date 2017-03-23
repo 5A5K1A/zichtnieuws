@@ -91,6 +91,12 @@ if( !function_exists('studio_get_the_timetoshow') ) {
 	}
 }
 
+/**
+ * Returns a more human way of the time ago
+ * @param    integer   $start_time   The start time
+ * @param    integer   $end_time     The end time
+ * @return   string                  The time ago
+ */
 if( !function_exists('studio_time_diff') ) {
 	function studio_time_diff( $start_time, $end_time = NULL ) {
 
