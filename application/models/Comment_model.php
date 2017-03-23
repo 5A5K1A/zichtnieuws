@@ -17,6 +17,10 @@ class Comment_model extends CI_Model {
 	 */
 	public function set_comment() {
 
+		if( !is_int($this->input->post('postid')) ) {
+			return FALSE;
+		}
+
 		$data = array(
 			'post_id'      => $this->input->post('postid'),
 			'author_name'  => $this->input->post('author'),
