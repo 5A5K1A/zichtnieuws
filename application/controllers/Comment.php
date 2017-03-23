@@ -63,9 +63,9 @@ class Comment extends CI_Controller {
 		$this->load->library('form_validation');
 
 		// add extra validation on form fields
-		$this->form_validation->set_rules('author', 'Naam', 'required');
-		$this->form_validation->set_rules('email', 'E-mail', 'required');
-		$this->form_validation->set_rules('comment', 'Reactie', 'required');
+		$this->form_validation->set_rules('author', 'Naam', 'trim|htmlspecialchars|required');
+		$this->form_validation->set_rules('email', 'E-mail', 'trim|htmlspecialchars|required|valid_email');
+		$this->form_validation->set_rules('comment', 'Reactie', 'trim|htmlspecialchars|required');
 
 		if ($this->form_validation->run() === FALSE) {
 			// render views
